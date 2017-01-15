@@ -1,36 +1,8 @@
 import { opmStyle } from './opmStyle';
+import { selectOptions } from './selectOptions';
 
-
-//options is a variable containing different options types for select-boxes that describe the different elements of
-// the diagram
-export const inspectorShapesOptions = {
-  shadowStyle: [
-    { content: 'Physical', value: { name: 'dropShadow', args: { dx: 6, dy: 6, blur: 0, color: 'grey' } } },
-    { content: 'Informatical', value: { name: 'dropShadow', args: { dx: 0, dy: 0, blur: 0, color: 'grey' } } },
-  ],
-  //dashed (Environmental) or not (Systemic) stroke
-  strokeStyle: [
-    { value: '0', content: 'Systemic' },
-    { value: '10,5', content: 'Environmental' }
-  ]
-
-};
 
 export const inspectorShapes = {
-
-
-  options: {
-    //with (Physical) or without (Informatical) shadow
-    shadowStyle: [
-      { content: 'Physical', value: { name: 'dropShadow', args: { dx: 6, dy: 6, blur: 0, color: 'grey' } } },
-      { content: 'Informatical', value: { name: 'dropShadow', args: { dx: 0, dy: 0, blur: 0, color: 'grey' } } },
-    ],
-    //dashed (Environmental) or not (Systemic) stroke
-    strokeStyle: [
-      { value: '0', content: 'Systemic' },
-      { value: '10,5', content: 'Environmental' }
-    ],
-  },
 
   //From this point defined different variables that build the attributes of the elements of the diagram.
 
@@ -75,7 +47,7 @@ export const inspectorShapes = {
 // return selection object.
 function CreateSelection(selectionType, selectionLabel, selectionGroup, selectionIndex)
 {
-  var selectionOptions = (selectionLabel === 'Essence')? inspectorShapesOptions.shadowStyle : inspectorShapesOptions.strokeStyle;
+  var selectionOptions = (selectionLabel === 'Essence')? selectOptions.shadowStyle : selectOptions.strokeStyle;
 
   var selectionObject = {
     type: selectionType,
