@@ -12,8 +12,6 @@ import { SaveModelDialogComponent } from './dialogs/save-model-dialog/save-model
 import { LoadModelDialogComponent } from './dialogs/load-model-dialog/load-model-dialog.component';
 import { ChooseLinkDialogComponent } from './dialogs/choose-link-dialog/choose-link-dialog.component';
 import { OplWidgetComponent } from './opl-widget/opl-widget.component';
-import {InspectorService} from "./services/inspector.service";
-import {inspectorLinks} from "./config/InspectorLinks";
 
 @NgModule({
   declarations: [
@@ -22,8 +20,7 @@ import {inspectorLinks} from "./config/InspectorLinks";
     SaveModelDialogComponent,
     LoadModelDialogComponent,
     ChooseLinkDialogComponent,
-    OplWidgetComponent,
-      inspectorLinks
+    OplWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +34,7 @@ import {inspectorLinks} from "./config/InspectorLinks";
     LoadModelDialogComponent,
     ChooseLinkDialogComponent
   ],
-  providers: [ModelStorageService, InspectorService],
+  providers: [ModelStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

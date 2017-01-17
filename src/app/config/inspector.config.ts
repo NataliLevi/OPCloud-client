@@ -1,5 +1,5 @@
 import { inspectorShapes } from './inspectorShapes';
-import { inspectorLinks } from './inspectorLinks';
+import { inspectorLinks } from './InspectorLinks';
 
 export const inspectorConfig = {
 
@@ -26,7 +26,7 @@ export const inspectorConfig = {
   //link parameters
   'opm.Link': {
     inputs: {
-      attrs: inspectorLinks.GetLinkDefinition(),
+      attrs: inspectorLinks.linkDefinition,
       labels: inspectorLinks.labelDefinition
     },
     groups: inspectorLinks.groupsDefinition

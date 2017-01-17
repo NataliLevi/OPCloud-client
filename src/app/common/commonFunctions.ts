@@ -1,24 +1,21 @@
 import { opmStyle } from '../config/opmStyle';
 
-export class commonFunctions {
+export const CommonFunctions = {
 
 //Function createGroup. Get the name of the group, its index and if it should be collapsed and generates a group object
-
-    CreateGroup(labelName, indexNumber, isClosed = false) {
-        var groupObject = {
+    createGroup(labelName, indexNumber, isClosed = false) {
+        return {
             label: labelName,
             index: indexNumber,
             closed: isClosed
         };
-        return groupObject;
-    }
+    },
 
 //Function CreateSelection. Gets selection type (select or select-box), selection label, in which inspector group it should be and the index.
 //The function defines options object for selection according to the label.
 //The function return selection object.
-
-    CreateSelection(selectionType, selectionOptions, selectionLabel, selectionGroup, selectionIndex, selectionDefault = '') {
-        var selectionObject = {
+    createSelection(selectionType, selectionOptions, selectionLabel, selectionGroup, selectionIndex, selectionDefault = '') {
+        return {
             type: selectionType,
             label: selectionLabel,
             defaultValue: selectionDefault,
@@ -26,26 +23,22 @@ export class commonFunctions {
             group: selectionGroup,
             index: selectionIndex
         }
-        return selectionObject;
-    }
+    },
 
 //Function CreateColorsObject. Gets label and index and generate a color-plate object in Styling group
-
-    CreateColorsObject(colorsLabel, colorsIndex) {
-        var colorsObject = {
+    createColorsObject(colorsLabel, colorsIndex) {
+        return {
             type: 'color-palette',
             options: opmStyle.inspectorFont.colorPalette,
             label: colorsLabel,
             group: 'styling',
             index: colorsIndex
         };
-        return colorsObject;
-    }
+    },
 
 // Function CreateRangeObject gets minimum and maximum values (default 10 and 40), label and index and generates a range object.
-
-    CreateRangeObject(minValue = 10, maxValue = 40, rangeLabel, rangeIndex) {
-        var rangeObject = {
+    createRangeObject(minValue = 10, maxValue = 40, rangeLabel, rangeIndex) {
+        return {
             type: 'range',
             min: minValue,
             max: maxValue,
@@ -55,18 +48,15 @@ export class commonFunctions {
             group: 'styling',
             index: rangeIndex
         };
-        return rangeObject;
-    }
+    },
 
 //Function CreateTextContentObject gets text label and index and generates a text box object.
-
-    CreateTextContentObject(textLabel, textIndex) {
-        var textContentObject = {
+    createTextContentObject(textLabel, textIndex) {
+        return {
             type: 'content-editable',
             label: textLabel,
             group: 'text',
             index: textIndex,
         };
-        return textContentObject;
     }
-}
+};
