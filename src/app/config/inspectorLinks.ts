@@ -14,7 +14,7 @@ export const inspectorLinks = {
     },
 
     labelDefinition: [{
-        position: CommonFunctions.createSelection('select-box', selectOptions.labelPosition, 'Position', 'Labels', 4, '0.5'),
+        position: CommonFunctions.createSelection('select-box', selectOptions.labelPosition, 'Position', 'Labels', 4),
         attrs: {
             text: {
                 text: {

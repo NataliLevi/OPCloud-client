@@ -6,6 +6,7 @@ import { opmShapes } from '../../config/opm-shapes.config';
 import { opmRuleSet } from '../../config/opm-validator';
 import { MdDialog } from '@angular/material';
 import { ChooseLinkDialogComponent } from '../../dialogs/choose-link-dialog/choose-link-dialog.component';
+import {linkTypeSelection} from '../../link-operating/linkTypeSelection'
 
 const joint = require('rappid');
 
@@ -67,6 +68,7 @@ export class RappidMainComponent implements OnInit {
             dialogRef.componentInstance.newLink = link;
             dialogRef.componentInstance.linkSource = link.getSourceElement();
             dialogRef.componentInstance.linkTarget = link.getTargetElement();
+            dialogRef.componentInstance.opmLinks = linkTypeSelection.findSuitableLinks(link);
 
             dialogRef.afterClosed().subscribe(result => {
               if (!!result) {

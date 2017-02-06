@@ -27,7 +27,10 @@ export const opmShapes = {
         },
         '.connection': { 'stroke-width': 2 },
         '.marker-source': { fill: '#f2f2f2', 'stroke-width': 2 }
-      }
+      },
+      labels: [
+        { position: 0.5, attrs: { text: { text: '' } } }
+      ]
     }, joint.dia.Link.prototype.defaults)
   }),
 

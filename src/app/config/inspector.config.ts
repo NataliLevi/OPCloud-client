@@ -1,5 +1,5 @@
 import { inspectorShapes } from './inspectorShapes';
-import { inspectorLinks } from './InspectorLinks';
+import { inspectorLinks } from './inspectorLinks';
 
 export const inspectorConfig = {
 
