@@ -1,6 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
-import { ModelStorageInterface } from '../../services/storage/model-storage.interface';
+import { ModelStorageService } from '../../services/model-storage.service';
 
 @Component({
   selector: 'app-save-model-dialog',
@@ -27,7 +27,7 @@ export class SaveModelDialogComponent implements OnInit {
 
   constructor(
     @Optional() public dialogRef: MdDialogRef<SaveModelDialogComponent>,
-    private modelStorageService: ModelStorageInterface) {
+    private modelStorageService: ModelStorageService) {
 
     this.models = modelStorageService.getModels();
   }

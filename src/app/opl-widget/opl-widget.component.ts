@@ -22,14 +22,11 @@ export class OplWidgetComponent implements OnInit {
 
   getOpl() {
     return this.graph.getCells().map((cell) => {
-      switch (cell.attributes.type) {
-        // TODO: add cases
-        case 'opm.Link':
-          const source = cell.getSourceElement();
-          const target = cell.getTargetElement();
-          if (!source || !target) return;
-          return `${cell.getSourceElement().attributes.type} 
-                    is connected to ${cell.getTargetElement().attributes.type}`;
+      if (cell.attributes.type === 'opm.Link') {
+        const source = cell.getSourceElement();
+        const target = cell.getTargetElement();
+        if (!source || !target) return;
+        return `${cell.getSourceElement().attributes.type} is connected to ${cell.getTargetElement().attributes.type}`
       }
 
       return cell.attributes.type;
