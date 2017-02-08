@@ -4,7 +4,7 @@ import { GraphService } from '../rappid/services/graph.service';
 @Component({
   selector: 'opcloud-opl-widget',
   template: `
-    <div class="opl-container">
+    <div class="opl-container" >
       <p *ngFor="let sentence of getOpl()">{{ sentence }}</p>
     </div>
   `,

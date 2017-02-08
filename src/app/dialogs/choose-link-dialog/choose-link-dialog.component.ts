@@ -15,7 +15,7 @@ import { MdDialogRef } from '@angular/material';
       <ul>
         <li *ngFor="let link of opmLinks" 
             (click)="select(link)" 
-            [ngClass]="link === selected ? 'selected' : ''">{{ link }}</li>
+            [ngClass]="link === selected ? 'selected' : ''">{{link.name}} - {{ link.opl }}</li>
       </ul>
       
       <p> 
@@ -30,7 +30,7 @@ export class ChooseLinkDialogComponent implements OnInit {
   public newLink: any;
   public linkSource: any;
   public linkTarget: any;
-  public opmLinks : Array<string>;
+  public opmLinks : Array<any>;
   private selected: any;
 
   constructor(

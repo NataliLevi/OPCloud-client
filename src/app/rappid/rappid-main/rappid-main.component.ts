@@ -68,7 +68,7 @@ export class RappidMainComponent implements OnInit {
             dialogRef.componentInstance.newLink = link;
             dialogRef.componentInstance.linkSource = link.getSourceElement();
             dialogRef.componentInstance.linkTarget = link.getTargetElement();
-            dialogRef.componentInstance.opmLinks = linkTypeSelection.findSuitableLinks(link);
+            dialogRef.componentInstance.opmLinks = linkTypeSelection.generateLinkWithOpl(link);
 
             dialogRef.afterClosed().subscribe(result => {
               if (!!result) {
