@@ -24,6 +24,7 @@ export const opmShapes = {
           fill: '#f2f2f2',
           d: 'M 8,33 L -12,25 L 8,17 L0,25 L 8,33 M 0,25 L 10,25',
           'stroke-width': 2
+
         },
         '.connection': { 'stroke-width': 2 },
         '.marker-source': { fill: '#f2f2f2', 'stroke-width': 2 }

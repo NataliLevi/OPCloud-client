@@ -72,6 +72,10 @@ export class RappidMainComponent implements OnInit {
 
             dialogRef.afterClosed().subscribe(result => {
               if (!!result) {
+                console.log('a: ', link.attributes.attrs[".marker-target"].d);
+                link.attributes.attrs.fill = 'red';
+                link.attributes.attrs[".marker-target"].d = 'M 10 10 m -5 0 a 5 5 0 1 0 10 0 a 5 5 0 1 0 -10 0';
+                console.log('a: ', link.attributes.attrs[".marker-target"].d);
                 console.log('chosen link: ', result);
               }
             });
